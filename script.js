@@ -20,6 +20,7 @@
   ex2_text.addEventListener("input", number);
 
   function number() {
+
     //ex2_content.innerHTML = "test";
 
     if(ex2_text.value.length < 9){
