@@ -23,13 +23,16 @@
 
     //ex2_content.innerHTML = "test";
 
-    if(ex2_text.value.length < 9){
-      ex2_content.innerHTML = "ok";
+    if (ex2_text.value.length != 9) {
+      ex2_content.innerHTML = "Długość numeru musi być równa 9";
+    }
+    else if (ex2_text.value.match(/[A-Z]/)) {
+      ex2_content.innerHTML = "Numer nie może zawierać liter";
     }
     else {
-      ex2_content.innerHTML = "za dlugi";
+      ex2_content.innerHTML = "Numer telefonu jest poprawny";
     }
-  
+
   }
 
 
