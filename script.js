@@ -24,13 +24,19 @@
     //ex2_content.innerHTML = "test";
 
     if (ex2_text.value.length != 9) {
-      ex2_content.innerHTML = "Długość numeru musi być równa 9";
+       ex2_content.innerHTML = "Długość numeru musi być równa 9";
     }
-    else if (ex2_text.value.match(/[A-Z]/)) {
+    else if (ex2_text.value.match(/[A-Z|a-z]/)) {
       ex2_content.innerHTML = "Numer nie może zawierać liter";
     }
+    else if (ex2_text.value.match(/[^0-9]/)) {
+        ex2_content.innerHTML = "Numer nie może zawierać znaków specjalnych";
+    }
+    else if (ex2_text.value.match(/[0-9]/) && ex2_text.value.length == 9) {
+        ex2_content.innerHTML = "Numer telefonu jest poprawny";
+    }
     else {
-      ex2_content.innerHTML = "Numer telefonu jest poprawny";
+      ex2_content.innerHTML = "Numer telefonu nie jest poprawny";
     }
 
   }
