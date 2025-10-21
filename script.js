@@ -42,9 +42,12 @@
   // zad3
   const ex3_e = document.getElementById("ex3_element");
   const ex3_two = document.getElementById("ex3_two");
+  const ex3_one = document.getElementById("ex3_one");
   ex3_e.addEventListener("dragstart", dragstartHandler);
   ex3_two.addEventListener("drop", dropHandler);
   ex3_two.addEventListener("dragover", dragoverHandler);
+  ex3_one.addEventListener("drop", dropHandler);
+  ex3_one.addEventListener("dragover", dragoverHandler);
 
   function dragstartHandler(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
